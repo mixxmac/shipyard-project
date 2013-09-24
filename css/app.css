@@ -12,6 +12,10 @@ div.main-content {
   padding: 0px;
   min-height: 500px;
 }
+.title {
+  font-size: 48px;
+  color: #4a4a4a;
+}
 .control-label {
   color: #777777;
 }
