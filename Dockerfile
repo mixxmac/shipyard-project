@@ -3,8 +3,8 @@ MAINTAINER Arcus "http://arcus.io"
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe multiverse" > /etc/apt/sources.list
 RUN apt-get update
 RUN RUNLEVEL=1 DEBIAN_FRONTEND=noninteractive apt-get install -y nginx-full
-ADD . /usr/share/nginx/www
-RUN chown -R www-data:www-data /usr/share/nginx
+ADD . /opt/www
+ADD .docker/nginx.conf /etc/nginx/nginx.conf
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 EXPOSE 80
